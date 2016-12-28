@@ -6,7 +6,8 @@ class Application {
 
     private $controllers = [
         "create" => "Bevprog\CrudDemo\Controllers\CreateController",
-        "list"   => "Bevprog\CrudDemo\Controllers\ListController"
+        "list"   => "Bevprog\CrudDemo\Controllers\ListController",
+        "update" => "Bevprog\CrudDemo\Controllers\UpdateController"
     ];
 
     public function run($query_params) {
