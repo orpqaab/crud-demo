@@ -12,45 +12,18 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <a href="admin.php">Admin</a>
-        <?php include "urlap.php"; 
-        $data=[];
-        while($row=mysql_fetch_assoc($result)){
-            $data[]=$row;
-        }
-    ;?>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <td>
-                    Név    
-                    </td> 
-                </tr>
-            </thead>
-            <tbody>
-               <?php foreach($data as $row ):  ?>
-                <tr>
-                    <td>
-                        <?php echo $row["nev"] ?>   
-                    </td>
-                    <td>
-                        <?php echo $row["tel"] ?>
-                    </td>
-                    <td>
-                        <a class="btn btn-success"  href="edit.php?id=<?php echo $row["id"] ?>"><span class="glyphicon glyphicon-scissors"></span> Szerkesztés</a> 
-                    </td>
-                    <td>
-                        <a class="btn btn-danger" href="delete.php?id=<?php echo $row["id"] ?>"><span class="glyphicon glyphicon-trash"></span> Törlés</a> 
-                    </td>
-                </tr> 
-                <?php endforeach;?>
-                
-            </tbody>
-        </table>
-        <form action="save.php" method="POST">
-            <input type="text" name="nev">
-            <input type="submit">
-        </form>
+    <form action="search.php" method="POST">
+  <div class="form-group">
+    <label for="Job_ID">Job ID-re keresés</label>
+    <input type="text" class="form-control" name="Job_ID" placeholder="Job ID">
+  </div>
+  <div class="form-group">
+    <label for="Vezeteknev">Vezetéknévre keresés</label>
+    <input type="text" class="form-control" name="Vezeteknev" placeholder="Vezetéknév">
+  </div>
+  <button type="submit" class="btn btn-default">Keresés</button>
+    </form>
+
             
         <?php
 

@@ -1,14 +1,10 @@
 <?php
 
 $connect= mysql_connect("localhost", "root", "");
-mysql_select_db("test", $connect);
-$result=mysql_query("update test set nev= ' ". $_POST["nev"] . "' where id=" . $_POST["id"], $connect);
-if (mysql_num_rows(mysql_query("select user_id from phones where user_id= " . $_POST["id"],$connect))){
-    $result=mysql_query("update phones set tel= ' ". $_POST["tel"] . "' where user_id=" . $_POST["id"],$connect);
-}
-else $result=mysql_query("insert into phones (tel,user_id) values ( ' ". $_POST["tel"] ."',".$_POST["id"].")",$connect);
+mysql_select_db("phpmyadmin", $connect);
+mysql_query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'", $connect);
+$result=mysql_query("update dontes_smp set FOI= ' ". $_POST["FOI"] . "' where Job_ID=" . $_POST["Job_ID"], $connect);
 if($result===false){
     var_dump(mysql_error($connect));
 }
-echo "fasz";
-header("Location: http://localhost/szargep");
+header("Location: http://localhost/koltsegvetes");

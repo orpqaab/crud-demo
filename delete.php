@@ -11,4 +11,4 @@ $dbh = new PDO($dsn, $username, $password, $options);
 $stmt=$dbh->prepare("delete from phones where user_id=:id")->execute($_GET);
 $stmt=$dbh->prepare("delete from test where id=:id")->execute($_GET);
 var_dump($dbh->errorInfo());
-header("Location: http://localhost/szargep");
+header("Location: http://localhost/koltsegvetes");

@@ -12,4 +12,4 @@ $stmt->execute($_POST);
 if($result===false){
     var_dump(mysql_error($connect));
 }
-header("Location: http://localhost/szargep");
+header("Location: http://localhost/koltsegvetes");
