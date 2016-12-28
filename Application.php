@@ -4,7 +4,10 @@ namespace Bevprog\CrudDemo;
 
 class Application {
 
-    private $controllers = ["create" => "Bevprog\CrudDemo\Controllers\CreateController"];
+    private $controllers = [
+        "create" => "Bevprog\CrudDemo\Controllers\CreateController",
+        "list"   => "Bevprog\CrudDemo\Controllers\ListController"
+    ];
 
     public function run($query_params) {
 
