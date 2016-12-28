@@ -10,7 +10,9 @@ and open the template in the editor.
            <title></title>
     </head>
     <body>
-    INDEX
-    <a href="/index.php?controller=create" >Create</a>
+        <form action="/index.php?controller=create" method="POST">
+            <input type="submit">
+        </form>
+            
     </body>
 </html>
