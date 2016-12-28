@@ -5,7 +5,9 @@ namespace Bevprog\CrudDemo\Controllers;
 class CreateController {
     
     public function showForm() {
-        echo "Form";    
+        $template = \Bevprog\CrudDemo\Configuration::VIEWS_DIR."/show_form.html";
+        echo implode("", file($template));
+           
     }
 
 }
