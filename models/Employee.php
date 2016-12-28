@@ -4,14 +4,15 @@ namespace Bevprog\CrudDemo\Models;
 
 class Employee {
     
-    private $empNo;
-    private $birthDate;
-    private $firstName;
-    private $lastName;
-    private $gender;
-    private $hireDate;
+    public $empNo;
+    public $birthDate;
+    public $firstName;
+    public $lastName;
+    public $gender;
+    public $hireDate;
     
-    public function __construct($empNo, $birthDate, $firstName, $lastName, $gender, $hireDate) {
+    public function __construct($data) {
+        extract($data);
         $this->empNo = $empNo;
         $this->birthDate = $birthDate;
         $this->firstName = $firstName;
