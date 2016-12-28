@@ -1,4 +1,13 @@
 <?php
-$viewtemplate=  implode("", file(VIEWS_DIR."/create.php"));
-echo $viewtemplate;
+
+namespace Bevprog\CrudDemo\Controllers;
+
+class CreateController {
+    
+    public function showForm() {
+        echo "Form";    
+    }
+
+}
+
 
