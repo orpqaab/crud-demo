@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>Liszt Items</div>
+        <div>
+            <?php foreach ($employees as $emp): ?>
+                <div><?php echo $emp["first_name"] ?></div>
+            <?php endforeach; ?>
+        </div>
     </body>
 </html>
