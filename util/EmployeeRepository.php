@@ -24,7 +24,7 @@ class EmployeeRepository {
     public function delete($employee) {
         $dbh = Database::getConnection();
         $stmt= $dbh->prepare(self::DELETE_EMPLOYEES);
-        $stmt->execute(get_object_vars($employee));
+        $stmt->execute([ 'empNo'  => $employee->empNo ]);
         return $stmt;
     }
 }
